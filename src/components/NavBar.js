@@ -40,6 +40,7 @@ const NavBar = () => {
               <div className="ml-10 flex items-baseline space-x-4">
                 <NavLink to="/baza-wiedzy" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" activeClassName="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Baza wiedzy</NavLink>
                 <NavLink to="/ogloszenia" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" activeClassName="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Ogłoszenia</NavLink>
+                <NavLink to="/przeslij-zadanie" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" activeClassName="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Prześlij zadanie</NavLink>
               </div>
             </div>
           </div>
@@ -75,6 +76,7 @@ const NavBar = () => {
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <NavLink to="/baza-wiedzy" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" activeClassName="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Baza wiedzy</NavLink>
           <NavLink to="/ogloszenia" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" activeClassName="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Ogłoszenia</NavLink>
+          <NavLink to="/przeslij-zadanie" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" activeClassName="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Prześlij zadanie</NavLink>
         </div>
         <div className="pt-4 pb-3 border-t border-gray-700">
         <div className="flex items-center px-5">

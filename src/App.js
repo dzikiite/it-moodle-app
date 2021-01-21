@@ -14,6 +14,7 @@ import TutorialsPage from './pages/TutorialsPage';
 import TutorialTemplate from './templates/TutorialTemplate';
 import RegisterPage from './pages/RegisterPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import UploadPage from './pages/UploadPage';
 
 function App() {
   return (
@@ -22,11 +23,12 @@ function App() {
         <Router>
           <Switch>
             <Route path='/' exact component={LoginPage} />
-            <Route path="/rejestracja" component={RegisterPage} />
-            <Route path="/przypomnij-haslo" component={ForgotPasswordPage} />
+            <Route path='/rejestracja' component={RegisterPage} />
+            <Route path='/przypomnij-haslo' component={ForgotPasswordPage} />
             <PrivateRoute path='/baza-wiedzy' exact component={TutorialsPage} />
             <PrivateRoute path='/baza-wiedzy/:slug' component={TutorialTemplate} />
-            <PrivateRoute path="/ogloszenia" component={AnnouncementsPage} />
+            <PrivateRoute path='/ogloszenia' component={AnnouncementsPage} />
+            <PrivateRoute path='/przeslij-zadanie' component={UploadPage} />
             <Route component={ErrorPage} />
           </Switch>
         </Router>

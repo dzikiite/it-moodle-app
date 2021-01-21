@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';
 import LoadingSpinner from '../components/LoadingSpinner';
-import ScientificMaterial from '../components/ScientificMaterial';
+import Tutorial from '../components/Tutorial';
 import { cmsData } from '../api/cms-data';
 import { useQuery } from '@apollo/client';
 
@@ -13,7 +13,7 @@ const TutorialsPage = () => {
   if (error) return `Error! ${error.message}`;
 
   const scientificMaterial = data.allMaterials.map(material => (
-    <ScientificMaterial key={material.id} props={material}/>
+    <Tutorial key={material.id} props={material}/>
   ))
 
   return ( 

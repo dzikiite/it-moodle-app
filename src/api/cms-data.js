@@ -11,9 +11,9 @@ export const cmsData = gql`
         }
         allAnnoucements {
         id
-        testName
-        testDescription
-        testDate
+        annoucementTitle
+        annoucementDescription
+        annoucementDate
         }
     }
 `

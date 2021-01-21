@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import LoadingSpinner from '../components/LoadingSpinner';
 import { useAuth } from '../contexts/AuthContext';
 
 const RegisterPage = () => {
@@ -9,6 +10,7 @@ const RegisterPage = () => {
     const { signUp } = useAuth();
     const [ error, setError ] = useState('')
     const [ loading, setLoading ] = useState(false);
+    const history = useHistory();
 
     const handleChange = e => {
         const { name, value } = e.target;
@@ -33,6 +35,8 @@ const RegisterPage = () => {
             setError('');
             setLoading(true);
             await signUp(email, password);
+            setError('Konto zostało utworzone, zostaniesz przekierowany na stronę logowania');
+            setTimeout(() => history.push('/'), 1500);
         } catch(error) {
             console.log(error.message);
             setError('Błąd podczas tworzenia konta');
