@@ -15,6 +15,8 @@ import TutorialTemplate from './templates/TutorialTemplate';
 import RegisterPage from './pages/RegisterPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import UploadPage from './pages/UploadPage';
+import TestsPage from './pages/TestsPage';
+import TestTemplate from './templates/TestTemplate';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
             <PrivateRoute path='/baza-wiedzy/:slug' component={TutorialTemplate} />
             <PrivateRoute path='/ogloszenia' component={AnnouncementsPage} />
             <PrivateRoute path='/przeslij-zadanie' component={UploadPage} />
+            <PrivateRoute path='/testy' exact component={TestsPage} />
+            <PrivateRoute path='/testy/:slug' component={TestTemplate} />
             <Route component={ErrorPage} />
           </Switch>
         </Router>

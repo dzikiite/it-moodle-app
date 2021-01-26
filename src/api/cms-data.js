@@ -15,5 +15,15 @@ export const cmsData = gql`
         annoucementDescription
         annoucementDate
         }
+        allTests {
+            id
+            testName
+            testSlug
+            answearTime
+            questions {
+                id
+                questionTitle
+            }
+        }
     }
 `
