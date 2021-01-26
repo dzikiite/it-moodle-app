@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 
 const LoadingSpinner = () => {
+    
     useEffect(() => {
         const effect = (isNeagative) => ({ opacity: 0, x: isNeagative ? -50 : 50, duration: .3 });
         

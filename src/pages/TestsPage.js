@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { cmsData } from '../api/cms-data';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import NavBar from '../components/NavBar';
 import Header from '../components/Header';

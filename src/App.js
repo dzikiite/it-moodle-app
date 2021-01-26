@@ -7,6 +7,7 @@ import {
   Switch,
   Route } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
+
 import LoginPage from './pages/LoginPage';
 import ErrorPage from './pages/ErrorPage';
 import AnnouncementsPage from './pages/AnnoucementsPage';

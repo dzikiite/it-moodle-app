@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import LoadingSpinner from '../components/LoadingSpinner';
 import { useAuth } from '../contexts/AuthContext';
 
 const RegisterPage = () => {
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
     const [ confirmPassword, setConfirmPassword ] = useState('');
+    const [ error, setError ] = useState('');
     const { signUp } = useAuth();
-    const [ error, setError ] = useState('')
     const [ loading, setLoading ] = useState(false);
     const history = useHistory();
 

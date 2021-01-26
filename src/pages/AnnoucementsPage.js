@@ -1,10 +1,11 @@
 import React from 'react';
+import { cmsData } from '../api/cms-data';
+import { useQuery } from '@apollo/client';
+
 import Header from '../components/Header';
 import NavBar from '../components/NavBar';
 import LoadingSpinner from '../components/LoadingSpinner';
 import Annoucement from '../components/Annoucement';
-import { cmsData } from '../api/cms-data';
-import { useQuery } from '@apollo/client';
 
 const AnnoucementsPage = () => {
   const { loading, error, data } = useQuery(cmsData);

@@ -6,7 +6,6 @@ const NavBar = () => {
   const [ isMenuOpen, setIsMenuOpen ] = useState(false);
   const [ isUserMenuOpen, setIsUserMenuOpen ] = useState(false);
   const { currentUser, logout } = useAuth();
-  const [ error, setError ] = useState('');
   const history = useHistory();
 
   const handleOpenMenu = () => {
@@ -18,13 +17,11 @@ const NavBar = () => {
   }
 
   const handleLogout = async () => {
-    setError('');
-
     try {
       await logout();
       history.push('/');
     } catch(err) {
-      setError('Nastąpił problem z wylogowaniem');
+      console.error(err)
     }
   }
 
